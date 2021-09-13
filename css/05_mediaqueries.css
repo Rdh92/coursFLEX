@@ -23,7 +23,7 @@ body{
 }
 
 main{
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     background-color: sandybrown;
 }
@@ -135,4 +135,81 @@ main{
 }
 .marge-11 {
     margin-left: 91.666666%;
+}
+
+/* les règles de medias queries pour le responsive et les différents écrans  */
+
+/* class pour les langages adaptatifs */
+.img-fluid{
+    width: 100%;
+}
+
+/* pour les téléphones ou smartphones  */
+
+@media (max-width: 320px) {
+
+    .column-xs-{
+        display: flex;
+        flex-direction: column;
+    }
+    .col-xs-12{
+        width: 100%;
+    }
+
+    .marge-xs{
+        margin: 0;
+    }
+    
+    body{
+        background-color: #fff;
+        }
+    
+        main{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+/* fin pour les téléphones  */
+
+/* pour les petites tablettes et les smartphones grand écrans  */
+
+@media (min-width: 321px) and (max-width:767px){
+
+    body{
+        background-color:pink;
+        }
+    
+    main{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .column-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/* pour les tablettes et certains ordinateurs portables  */
+
+@media(min-width:768px) and (max-width:1096px) {
+
+    body{
+        background-color: lightskyblue;
+    }
+
+    main{
+        width: 100%;
+    }
+}
+
+/* pour les ordinateurs de bureau, les écrans plus grands que 1097px */
+
+@media(min-width:1097px) {
+    
+    body{
+        background-color: limegreen;
+    }
 }
